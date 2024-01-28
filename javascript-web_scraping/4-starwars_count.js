@@ -5,7 +5,7 @@ const args = process.argv;
 
 request.get(`${args[2]}`, '', (err, res, body) => {
   if (err) {
-    console.error(err, 10);
+    console.error(10);
     return;
   }
 
