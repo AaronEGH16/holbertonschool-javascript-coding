@@ -6,9 +6,10 @@ const args = process.argv;
 request.get(`${args[2]}`, '', (err, res, body) => {
   if (err) {
     console.error(err);
-  } else {
-    const films = JSON.parse(body);
-    const amount = films.results.filter(film => film.characters.includes('https://swapi-api.hbtn.io/api/people/18/'));
-    console.log(amount.length);
+    return;
   }
+
+  const films = JSON.parse(body);
+  const amount = films.results.filter(film => film.characters.includes('https://swapi-api.hbtn.io/api/people/18/'));
+  console.log(amount.length);
 });
