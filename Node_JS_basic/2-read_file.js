@@ -27,7 +27,9 @@ const countStudents = (file) => {
   delete fields.field;
 
   for (const fieldName in fields) {
-    console.log(`Number of students in ${fieldName}: ${fields[fieldName].length}. List: ${fields[fieldName].join(', ')}`);
+    if (fieldName) {
+      console.log(`Number of students in ${fieldName}: ${fields[fieldName].length}. List: ${fields[fieldName].join(', ')}`);
+    }
   }
 };
 
