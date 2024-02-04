@@ -10,9 +10,14 @@ const countStudents = (file) => {
     throw new Error('Cannot load the database');
   }
 
-  const dataArray = data.trim().split('\n').map((line) => line.split(','));
+  const dataArray = data
+    .trim()
+    .split('\n')
+    .map((line) => line.split(','));
 
-  console.log(`Number of students: ${dataArray.length ? dataArray.length - 1 : 0}`);
+  console.log(
+    `Number of students: ${dataArray.length ? dataArray.length - 1 : 0}`
+  );
 
   const fields = {};
 
@@ -28,7 +33,11 @@ const countStudents = (file) => {
 
   for (const fieldName in fields) {
     if (fieldName) {
-      console.log(`Number of students in ${fieldName}: ${fields[fieldName].length}. List: ${fields[fieldName].join(', ')}`);
+      console.log(
+        `Number of students in ${fieldName}: ${
+          fields[fieldName].length
+        }. List: ${fields[fieldName].join(', ')}`
+      );
     }
   }
 };
