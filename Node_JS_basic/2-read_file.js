@@ -16,7 +16,7 @@ const countStudents = (file) => {
     .map((line) => line.split(','));
 
   console.log(
-    `Number of students: ${dataArray.length ? dataArray.length - 1 : 0}`
+    `Number of students: ${dataArray.length ? dataArray.length - 1 : 0}`,
   );
 
   const fields = {};
@@ -36,7 +36,7 @@ const countStudents = (file) => {
       console.log(
         `Number of students in ${fieldName}: ${
           fields[fieldName].length
-        }. List: ${fields[fieldName].join(', ')}`
+        }. List: ${fields[fieldName].join(', ')}`,
       );
     }
   }
