@@ -22,6 +22,6 @@ const readDatabase = (file) => fs.readFile(path.normalize(file), 'utf-8')
 
     return fields;
   })
-  .catch((error) => { Error(error); });
+  .catch((error) => { throw error; });
 
 module.exports = readDatabase;
